@@ -5,7 +5,7 @@ if (isset($_POST['submit'])) {
     $usernameEmail = $_POST['usernameEmail'];
     $password = $_POST['password'];
 
-    $recaptchaSecret = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe'; // Replace with your reCAPTCHA secret key
+    $recaptchaSecret = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
     $recaptchaResponse = $_POST['g-recaptcha-response'];
 
     $recaptchaVerify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
@@ -58,36 +58,35 @@ if (isset($_POST['submit'])) {
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-    <section class="vh-100 d-flex justify-content-center align-items-center" style="color: #8fc4b7;">
+    <section class="vh-100 d-flex justify-content-center align-items-center" style="background-color: #8fc4b7;">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-6 text-black">
-                    <div class="px-5 ms-xl-4">
-                        <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
-                        <span class="h1 fw-bold mb-0">Task Tracker</span>
-                    </div>
-
-                    <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
-                        <form action="login.php" method="post" style="width: 23rem;">
-                            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
-
-                            <div class="mb-4">
-                                <input type="text" id="usernameEmail" name="usernameEmail" class="form-control form-control-lg" placeholder="Username/Email" required />
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="card rounded-3">
+                        <div class="row">
+                            <div class="col-sm-12 text-black">
+                                <div class="px-5 ms-xl-4">
+                                    <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+                                    <span class="h1 fw-bold mb-0">Task Tracker</span>
+                                </div>
+                            <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-3 pt-5 pt-xl-0 mt-xl-n5">
+                                <form action="login.php" method="post" style="width: 23rem;">
+                                    <h3 class="fw-normal mb-2 pb-3" style="letter-spacing: 1px;">Log in</h3>
+                                    <div class="mb-4">
+                                        <input type="text" id="usernameEmail" name="usernameEmail" class="form-control form-control-lg" placeholder="Username/Email" required />
+                                    </div>
+                                    <div class="mb-4">
+                                        <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Password" required />
+                                    </div>
+                                    <div class="g-recaptcha mb-3" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                                    <div class="pt-1 mb-2">
+                                        <button class="btn btn-info btn-lg btn-block" type="submit" name="submit">Login</button>
+                                    </div>
+                                    <p>Don't have an account? <a href="signup.php" class="link-info">Register here</a></p>
+                                </form>
                             </div>
-
-                            <div class="mb-4">
-                                <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Password" required />
                             </div>
-
-                            <div class="g-recaptcha mb-3" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
-
-                            <div class="pt-1 mb-2">
-                                <button class="btn btn-info btn-lg btn-block" type="submit" name="submit">Login</button>
-                            </div>
-                            <!-- Button Forgot Password Yang Belum -->
-                            <p class="small mb-1 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
-                            <p>Don't have an account? <a href="signup.php" class="link-info">Register here</a></p>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
