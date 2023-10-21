@@ -27,10 +27,10 @@
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
 
-        $con = mysqli_connect("localhost", "root", "", "TaskTracker");
+        $con = mysqli_connect("localhost", "root", "", "task-tracker");
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $con = mysqli_connect("localhost", "root", "", "TaskTracker");
+            $con = mysqli_connect("localhost", "root", "", "task-tracker");
 
             if (!$con) {
                 die('Connection failed: ' . mysqli_connect_error());
