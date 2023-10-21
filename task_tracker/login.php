@@ -1,5 +1,4 @@
 <?php
-session_start();
 require 'config.php';
 
 if (isset($_POST['submit'])) {
@@ -54,18 +53,46 @@ if (isset($_POST['submit'])) {
         <meta charset="utf-8">
         <title>Login</title>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-        <h2>Login</h2>
-        <form class="" action="login.php" method="post">
-            Username/Email: <input type="text" name="usernameEmail" id="usernameEmail" required value="">
-            <br>
-            Password: <input type="password" name="password" id="password" required value="">
-            <br>
-            <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
-            <br>
-            <button type="submit" name="submit">Login</button>
-        </form>
-        <a href="signup.php">Signup</a>
+    <section class="vh-100 d-flex justify-content-center align-items-center" style="color: #8fc4b7;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-black">
+                    <div class="px-5 ms-xl-4">
+                        <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+                        <span class="h1 fw-bold mb-0">Task Tracker</span>
+                    </div>
+
+                    <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+                        <form action="login.php" method="post" style="width: 23rem;">
+                            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+
+                            <div class="mb-4">
+                                <input type="text" id="usernameEmail" name="usernameEmail" class="form-control form-control-lg" placeholder="Username/Email" required />
+                            </div>
+
+                            <div class="mb-4">
+                                <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Password" required />
+                            </div>
+
+                            <div class="g-recaptcha mb-3" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+
+                            <div class="pt-1 mb-2">
+                                <button class="btn btn-info btn-lg btn-block" type="submit" name="submit">Login</button>
+                            </div>
+                            <!-- Button Forgot Password Yang Belum -->
+                            <p class="small mb-1 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+                            <p>Don't have an account? <a href="signup.php" class="link-info">Register here</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
 </html>

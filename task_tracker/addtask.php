@@ -15,8 +15,9 @@ if(isset($_POST['submit'])){
     if($q_run){
         header('location: index.php');
     } else {
-        echo "Data Failed";
+        echo "Data Failed: " . mysqli_error($con);
     }
+    
 }
 
 ?>
