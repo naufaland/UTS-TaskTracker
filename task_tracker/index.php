@@ -24,7 +24,7 @@ if (!empty($_SESSION['id'])) {
         <link rel='stylesheet' href='style.css'>
 </head>
 <body>
-    <div class="container">
+    <div class="container" style="background-color: #20BDFF;">
         <h3><i class='bx bx-run'></i><b>TASK TRACKER</b></h3>
         <br>
         <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">
