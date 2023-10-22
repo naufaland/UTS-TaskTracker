@@ -21,6 +21,7 @@ if (!empty($_SESSION['id'])) {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel='stylesheet' href='style.css'>
 </head>
 <body>
     <div class="container">
@@ -29,7 +30,7 @@ if (!empty($_SESSION['id'])) {
         <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">
             <i class="fa fa-plus"></i> Add New Task
         </button>
-        <a href="logout.php" class="btn btn-primary"> Logout </a>
+        <a href="logout.php" class="btn btn-primary"><i class='bx bx-exit'></i></a>
         <hr>
         <?php
         $getData = "SELECT * FROM listtask ORDER BY 1 DESC";
@@ -41,6 +42,7 @@ if (!empty($_SESSION['id'])) {
                 <tr>
                     <th class="text-center" scope="col">No.</th>
                     <th class="text-center" scope="col">Task</th>
+                    <th class="text-center" scope="col">Start Date
                     <th class="text-center" scope="col">Done</th>
                     <th class="text-center" scope="col">Progress</th>
                     <th class="text-center" scope="col">Edit</th>
@@ -51,16 +53,18 @@ if (!empty($_SESSION['id'])) {
             while ($row = mysqli_fetch_array($runData)) {
                 $sl = ++$i;
                 $id = $row['id'];
-                $title = htmlspecialchars($row['taskTitle']); // XSS prevention
-                $desc = htmlspecialchars($row['deskripsi']); // XSS prevention
-                $proses = htmlspecialchars($row['progress']); // XSS prevention
+                $title = strtoupper(htmlspecialchars($row['taskTitle'])); 
+                $desc = htmlspecialchars($row['deskripsi']); 
+                $proses = htmlspecialchars($row['progress']);
+                $date = $row['tanggal'];
                 ?>
                 <tr>
                     <td class='text-center'><?php echo $sl; ?></td>
                     <td class='text-left'>
-                        <div><?php echo $title; ?></div>
+                        <div><b><?php echo $title; ?></b></div>
                         <?php echo $desc; ?>
                     </td>
+                    <td class='text-center'><?php echo $date; ?></td>
                     <td class='text-center'>
                         <input type='checkbox' name='myCheckbox' id='myCheckbox'>
                     </td>
@@ -68,7 +72,7 @@ if (!empty($_SESSION['id'])) {
                         <select name="inputproses">
                             <option><?php echo $proses; ?></option>
                             <option>In Progress</option>
-                            <option>Done</option>
+                            <option>Finish</option>
                         </select>
                     </td>
                     <td class='text-center'>
@@ -112,11 +116,15 @@ if (!empty($_SESSION['id'])) {
                                 <input type="text" class="form-control" name="description" required>
                             </div>
                             <div class="form-row">
-                                <div class="form-group col-md-12">
+                                <div class="form-group col-md-6">
                                     <label for="inputProgress">Progress</label>
                                     <select class="form-control" name="proses">
                                         <option>Not Yet Started</option>
                                     </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputDate">Start Date</label>
+                                    <input type="date" class="form-control" name="duedate" required>
                                 </div>
                             </div>
                         </div>

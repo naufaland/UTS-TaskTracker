@@ -58,7 +58,7 @@ if (isset($_POST['submit'])) {
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-    <section class="vh-100 d-flex justify-content-center align-items-center" style="background-color: #8fc4b7;">
+    <section class="vh-100 d-flex justify-content-center align-items-center" style="background: #20BDFF;">
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-lg-8 col-xl-6">
@@ -66,7 +66,7 @@ if (isset($_POST['submit'])) {
                         <div class="row">
                             <div class="col-sm-12 text-black">
                                 <div class="px-5 ms-xl-4">
-                                    <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+                                    <i class="bx bx-run fa-2x me-3 pt-5 mt-xl-4"></i>
                                     <span class="h1 fw-bold mb-0">Task Tracker</span>
                                 </div>
                             <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-3 pt-5 pt-xl-0 mt-xl-n5">

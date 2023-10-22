@@ -8,7 +8,7 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-    <section class="h-100 h-custom" style="background-color: #8fc4b7;">
+    <section class="h-100 h-custom" style="background-color: #20BDFF;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-8 col-xl-6">
@@ -120,14 +120,16 @@
                         mysqli_stmt_bind_param($stmt, "sssssss", $_POST['nama_depan'], $_POST['nama_belakang'], $_POST['username'], $_POST['email'], $hashedPassword, $_POST['gender'], $_POST['tanggal_lahir']);
 
                         if (mysqli_stmt_execute($stmt)) {
-                            echo "<script> alert('Data ter-submit.'); </script>";
-                            header('location: login.php');
+                            echo "<script>
+                            alert('Sign Up Success!');
+                            window.location.href='login.php';
+                            </script>";
                         } else {
                             die('Error in executing the query: ' . mysqli_error($con));
                         }
 
                         mysqli_stmt_close($stmt);
-                        // --- end actual submit ---
+
                     }
                 } else {
                     echo "<script>alert('The username field is required and cannot be left empty.');</script>";
