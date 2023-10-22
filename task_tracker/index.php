@@ -33,7 +33,8 @@ if (!empty($_SESSION['id'])) {
         <a href="logout.php" class="btn btn-primary"><i class='bx bx-exit'></i></a>
         <hr>
         <?php
-        $getData = "SELECT * FROM listtask ORDER BY 1 DESC";
+        $userid = $_SESSION['id'];
+        $getData = "SELECT * FROM listtask WHERE user_id = $userid ORDER BY 1 DESC";
         $runData = mysqli_query($con, $getData);
         $i = 0;
         ?>
