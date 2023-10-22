@@ -21,10 +21,10 @@ if (!empty($_SESSION['id'])) {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel='stylesheet' href='style.css'>
+        <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="container" style="background-color: #20BDFF;">
+    <div class="container" style="background-color: #FFFFF0;">
         <h3><i class='bx bx-run'></i><b>TASK TRACKER</b></h3>
         <br>
         <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">

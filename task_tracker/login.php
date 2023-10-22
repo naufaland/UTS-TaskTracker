@@ -58,7 +58,7 @@ if (isset($_POST['submit'])) {
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-    <section class="vh-100 d-flex justify-content-center align-items-center" style="background: #20BDFF;">
+    <section class="vh-100 d-flex justify-content-center align-items-center" style="background: aquamarine;">
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-lg-8 col-xl-6">
@@ -71,7 +71,7 @@ if (isset($_POST['submit'])) {
                                 </div>
                             <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-3 pt-5 pt-xl-0 mt-xl-n5">
                                 <form action="login.php" method="post" style="width: 23rem;">
-                                    <h3 class="fw-normal mb-2 pb-3" style="letter-spacing: 1px;">Log In</h3>
+                                    <h3 style="letter-spacing: 1px;">LOG IN</h3>
                                     <div class="mb-4">
                                         <input type="text" id="usernameEmail" name="usernameEmail" class="form-control form-control-lg" placeholder="Username/Email" required />
                                     </div>
@@ -80,7 +80,7 @@ if (isset($_POST['submit'])) {
                                     </div>
                                     <div class="g-recaptcha mb-3" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
                                     <div class="pt-1 mb-2">
-                                        <button class="btn btn-info btn-lg btn-block" type="submit" name="submit">Login</button>
+                                        <button class="btn btn-success btn-lg mb-1" type="submit" name="submit">Login</button>
                                     </div>
                                     <p>Don't have an account? Please <a href="signup.php" class="link-info">Sign Up here</a></p>
                                 </form>
