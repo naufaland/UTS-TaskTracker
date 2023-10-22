@@ -14,7 +14,7 @@
       <div class="col-lg-8 col-xl-6">
         <div class="card rounded-3">
           <div class="card-body p-4 p-md-5">   
-            <h3 class="text-center mb-2 pb-2 pb-md-0 mb-md-3 px-md-2">Registration Form</h3>
+            <h3 class="text-center mb-2 pb-2 pb-md-0 mb-md-3 px-md-2">SIGN UP YOUR ACCOUNT!</h3>
             <form action="signup.php" method="post" class="px-md-2">
             <div class="row">
             <div class="col">
@@ -43,7 +43,7 @@
             <div class="row">
                 <div class="col">
                     <div class="form-outline mb-2">
-                    <input type="password" id="form3Example1q" class="form-control" name='password' placeholder="Password" />
+                    <input type="password" id="form3Example1q" class="form-control" name='password' placeholder="Password" required />
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                     <label for="birthdate">Birth Date</label>
                     <input type="date" id="birthdate" name="tanggal_lahir" class="form-control">
                 </div>
-                      <h6 class="mb-2 pb-1">Gender: </h6>
+                      <h6 class="mb-1 pb-1">Gender: </h6>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="gender" id="femaleGender"
                             value="option1" checked />
