@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2023 at 12:35 PM
+-- Generation Time: Oct 23, 2023 at 04:56 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -42,7 +42,7 @@ CREATE TABLE `listtask` (
 --
 
 INSERT INTO `listtask` (`id`, `taskTitle`, `tanggal`, `deskripsi`, `progress`, `done`, `user_id`) VALUES
-(49, 'tes', '2023-10-22', 'testing', 'Not yet started', NULL, 12),
+(49, 'progress testing', '2023-10-22', 'testing testing', 'In Progress', NULL, 12),
 (50, 'halo', '2023-10-22', 'HAI HALO', 'Not yet started', NULL, 13);
 
 -- --------------------------------------------------------
@@ -58,7 +58,7 @@ CREATE TABLE `master_user` (
   `username` varchar(25) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `gender` varchar(2) NOT NULL,
+  `gender` varchar(20) NOT NULL,
   `tanggal_lahir` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -78,7 +78,8 @@ INSERT INTO `master_user` (`id`, `nama_depan`, `nama_belakang`, `username`, `ema
 (10, 'King', 'Abi', 'kingabi', 'kingabi@gmail.com', '$2y$10$gTRfmsg/qw1V5SphRW87veeZKmmhTpt9F3WHO7tNcIJ5qt82kvEvq', 'op', '2022-06-07'),
 (11, 'Fikri', 'Andrasito', 'sabotenjakku', 'lolol@gmail.com', '$2y$10$Zd9qj4rOWgv2fJvajrC6muXMRKNi7oVwFqAfetAEzZ.il/Jai2z/q', 'op', '2023-10-11'),
 (12, 'King', 'rabbit', 'king', 'king@gmail.com', '$2y$10$ewYxWhg7ToJvQNPpiZHvN.AxpNuWi9TBMyhu/MU4PP465F2AUVL9e', 'op', '2023-10-10'),
-(13, 'lego', 'ninjago', 'ninjago', 'lego@gmail.com', '$2y$10$6M45RBmsetnop..wEVG2.OE1UkEAXP6f.p8mkQL87yoRdQy67153K', 'op', '2023-10-22');
+(13, 'lego', 'ninjago', 'ninjago', 'lego@gmail.com', '$2y$10$6M45RBmsetnop..wEVG2.OE1UkEAXP6f.p8mkQL87yoRdQy67153K', 'op', '2023-10-22'),
+(14, 'King', 'Fikri', 'kingfikri', 'kingfikri@gmail.com', '$2y$10$b.ggz/I9LQcpsY8pfOHOfe5fDGA0FuyezVOa98A94ew2CHSWjYOju', 'op', '2023-10-11');
 
 --
 -- Indexes for dumped tables
@@ -112,7 +113,7 @@ ALTER TABLE `listtask`
 -- AUTO_INCREMENT for table `master_user`
 --
 ALTER TABLE `master_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
